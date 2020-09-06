@@ -1,11 +1,9 @@
 import React from 'react'
 
-import Title from '~/components/text/Title'
+import Routes from '~/routes'
 
 export default function App() {
   return (
-    <div>
-      <Title title="Hello World!!!" />
-    </div>
+    <Routes />
   )
 }
