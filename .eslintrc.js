@@ -30,6 +30,7 @@ module.exports = {
     semi: ['error', 'never'],
     'no-use-before-define': 'off',
     'react/require-default-props': 'off',
+    'import/prefer-default-export': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
