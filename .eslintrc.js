@@ -4,11 +4,7 @@ module.exports = {
     es2021: true,
   },
   extends: [
-    'plugin:react/recommended',
     'airbnb',
-    'eslint:recommended',
-    'plugin:import/errors',
-    'plugin:import/warnings',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -23,12 +19,17 @@ module.exports = {
   settings: {
     'import/resolver': {
       alias: {
-        map: [['~', './src']],
+        map: [
+          ['~', './src'],
+        ],
+        extensions: ['.ts', '.js', '.jsx', '.json'],
       },
     },
   },
   rules: {
     semi: ['error', 'never'],
+    'no-use-before-define': 'off',
+    'react/require-default-props': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
