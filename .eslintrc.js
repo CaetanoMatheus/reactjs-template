@@ -6,6 +6,9 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    'eslint:recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -17,7 +20,25 @@ module.exports = {
   plugins: [
     'react',
   ],
+  settings: {
+    'import/resolver': {
+      alias: {
+        map: [['~', './src']],
+      },
+    },
+  },
   rules: {
     semi: ['error', 'never'],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+        mjs: 'never',
+      },
+    ],
   },
 }
