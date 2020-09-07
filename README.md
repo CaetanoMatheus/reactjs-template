@@ -40,5 +40,5 @@ yarn start
 By default it can be accessed at:
 
 ```sh
-http://localhost:8080/
+http://localhost:3000/
 ```
